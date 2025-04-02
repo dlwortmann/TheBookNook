@@ -1,3 +1,3 @@
 interface MovieAttributes {
-    id: nubmer
+    id: number
 }
