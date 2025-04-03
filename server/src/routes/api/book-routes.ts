@@ -4,7 +4,9 @@ import { Book } from '../../models/book.js';
 
 const router = express.Router();
 
-// get all books
+
+// get all books?
+
 router.get('/', async (_req: Request, res: Response) => {
     try {
         const books = await Book.findAll();
@@ -26,6 +28,7 @@ router.get('/:isbn', async (req: Request, res: Response) => {
     } catch (error) {
         res.status(500).json({ error: 'Error' });
     }
+
 });
 
 // add a new book
@@ -95,3 +98,6 @@ router.delete('/:isbn', async (req: Request, res: Response) => {
 });
 
 export default router;
+
+});
+

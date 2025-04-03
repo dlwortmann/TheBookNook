@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/', async (_req: Request, res: Response) => {
     try {
         const reviews = await Review.findAll();
+
         res.status(200).json(reviews);
     } catch (error) {
         res.status(500).json({ error: 'Error' });
@@ -93,3 +94,6 @@ router.delete('/:id', async (req: Request, res: Response) => {
 });
 
 export default router;
+
+    
+

@@ -34,6 +34,10 @@ router.get('/:id', async (req: Request, res: Response) => {
 });
 
 // create new user 
+
+// edit based on what danny puts in user.ts !!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 router.post('/', async (req: Request, res: Response) => {
     const { username, email, password } = req.body;
     try {
@@ -58,6 +62,7 @@ router.put('/:id', async (req: Request, res: Response) => {
         } else {
             res.status(404).json({ message: 'User not found.' });
         }
+
     } catch (error: any) {
         res.status(400).json({ message: error.message });
     }
@@ -80,3 +85,4 @@ router.delete('/:id', async (req: Request, res: Response) => {
 });
 
 export { router as userRouter };
+
