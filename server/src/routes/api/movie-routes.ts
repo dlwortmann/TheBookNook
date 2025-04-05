@@ -13,3 +13,5 @@ router.get('/', async (_req: Request, res: Response) => {
         res.status(500).json({ error: "Could not find movie." });
     }
 });
+
+export { router as movieRouter };
