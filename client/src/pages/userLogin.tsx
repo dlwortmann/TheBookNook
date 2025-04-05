@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { UserLogin } from "../interfaces/UserLogin";
+import type { UserLogin } from "../interfaces/userLogin";
 
 const UserLoginPage = () => {
 
