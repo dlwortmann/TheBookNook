@@ -1,6 +1,6 @@
 import express from 'express';
 import { Request, Response } from 'express';
-import { Review } from '../../models/review.js';
+import { Review, ReviewResponse } from '../../models/review.js';
 
 const router = express.Router();
 
@@ -33,7 +33,7 @@ router.post('/:reviewId/responses', async (req: Request, res: Response) => {
     const { content, author } = req.body;
     try {
         const response = await ReviewResponse.create({
-            reviewId: req.params.reviewId,
+           // reviewId: req.params.reviewId,
             content,
             author,
         });
@@ -63,7 +63,7 @@ router.put('/:reviewId/responses/:responseId', async (req: Request, res: Respons
 router.delete('/:reviewId/responses/:responseId', async (req: Request, res: Response) => {
     try {
         const deleted = await ReviewResponse.destroy({
-            where: { id: req.params.responseId },
+            where: { reviewId: req.params.responseId },
         });
         if (!deleted) {
             return res.status(404).json({ message: 'Response not found.' });
@@ -93,7 +93,7 @@ router.delete('/:id', async (req: Request, res: Response) => {
     }
 });
 
-export default router;
+export { router as reviewRouter };
 
     
 

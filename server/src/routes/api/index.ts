@@ -1,9 +1,15 @@
-import { tipRouter } from './tip-routes.js';
-import { feedbackRouter } from './feedback-routes.js';
-import express from 'express';
-const router = express.Router();
+import { Router } from 'express';
+import { bookRouter } from './book-routes.js'
+import { movieRouter } from './movie-routes.js'
+import { reviewRouter } from './review-routes.js'
+import { userRouter } from './user-routes.js'
 
-router.use('/tips', tipRouter);
-router.use('/feedback', feedbackRouter);
+const router = Router();
+
+router.use('/movies', movieRouter);
+router.use('/books', bookRouter);
+router.use('/reviews', reviewRouter);
+router.use('/users', userRouter);
 
 export default router;
+ 

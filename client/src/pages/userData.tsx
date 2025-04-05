@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { UserData } from "../interfaces/UserData";
+import type { UserData } from "../interfaces/userData";
 
 const UserDataPage = () => {
     const [formData, setFormData] = useState<UserData>({
