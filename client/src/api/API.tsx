@@ -25,7 +25,7 @@ const searchOMDB = async (query: string) => {
  const searchBooks = async (query: string) => {
     try {
         console.log(import.meta.env.GOOGLE_API_KEY);
-        const response = await fetch (`https://www.googleapis.com/books/v1/volumes?q=search-terms&key=${import.meta.env.GOOGLE_API_KEY}`);
+        const response = await fetch (`https://www.googleapis.com/books/v1/volumes?q=${query}&key=${import.meta.env.GOOGLE_API_KEY}`);
         console.log('Response:', response);
         const data = await response.json();
         if (!response.ok) {

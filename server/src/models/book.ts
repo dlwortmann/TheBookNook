@@ -63,7 +63,7 @@ export function BookFactory(sequelize: Sequelize):
                 allowNull: true,
             },
             reviews: { 
-                type: DataTypes.ARRAY,
+                type: DataTypes.ARRAY(DataTypes.STRING),
                 allowNull: true,
             }
         },
