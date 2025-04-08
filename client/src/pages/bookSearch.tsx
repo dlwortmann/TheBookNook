@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import type { Book } from "../interfaces/bookSearch";
+import { searchBooks } from "../api/API";
 
 const BookSearch: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -7,11 +9,11 @@ const BookSearch: React.FC = () => {
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
-    };
+    }; //updates searchTerm 
 
     const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSearchType(e.target.value);
-    };
+    }; //updates searchType
 
     const handleSearch = async () => {
         try {
