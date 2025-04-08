@@ -1,4 +1,4 @@
-import { Movie } from '../models/movie.js'
+import { Movie } from '../models/index.js'
 
 export const seedMovies = async () => {
     await Movie.bulkCreate([

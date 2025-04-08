@@ -3,11 +3,10 @@
 //display favorite books
 //display a list of reviews
 //a profile page displays data that is already WebGLActiveInfo. find the data, then display it
-//place the user profile name to the top left of the page
 import React, { useState } from 'react';
 import type { UserData } from "../interfaces/userData";
 
-  const profilePage = () => {
+const profilePage = () => {
   const [userData, setUserData] = useState<UserData > ({}as UserData);
 
   return (
@@ -45,3 +44,4 @@ import type { UserData } from "../interfaces/userData";
     </div>
    )
   };
+      
