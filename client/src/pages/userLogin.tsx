@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { UserLogin } from "../interfaces/userLogin";
 
 const UserLoginPage = () => {

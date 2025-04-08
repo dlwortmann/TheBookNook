@@ -7,6 +7,9 @@ const UserDataPage = () => {
         email: null,
         username: null,
         password: null,
+        favoriteMovies: [],
+        favoriteBooks: [],
+        reviews: [],
     });
 
     const [message, setMessage] = useState<string | null>(null);
@@ -16,6 +19,14 @@ const UserDataPage = () => {
         setFormData(prev => ({
             ...prev,
             [name]: value,
+        }));
+    };
+
+    const handleArrayChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'favoriteMovies' | 'favoriteBooks' | 'reviews') => {
+        const { value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [type]: value.split(",").map(item => item.trim()),
         }));
     };
 
@@ -44,7 +55,6 @@ const UserDataPage = () => {
                 placeholder="Email"
                 value={formData.email ?? ""}
                 onChange={handleChange}
-                className="border p-2 rounded"
                 />
                    <input
                 type="text"
@@ -52,7 +62,6 @@ const UserDataPage = () => {
                 placeholder="Username"
                 value={formData.username ?? ""}
                 onChange={handleChange}
-                className="border p-2 rounded"
                 />
                    <input
                 type="password"
@@ -60,7 +69,27 @@ const UserDataPage = () => {
                 placeholder="Password"
                 value={formData.password ?? ""}
                 onChange={handleChange}
-                className="border p-2 rounded"
+                />
+                    <input
+                type="text"
+                name="favoriteMovies"
+                placeholder="Favorite Movies"
+                value={formData.favoriteMovies?.join(",") ?? ""}
+                onChange={(e) => handleArrayChange(e, 'favoriteMovies')}
+                />
+                <input
+                type="text"
+                name="favoriteBooks"
+                placeholder="Favorite Books"
+                value={formData.favoriteBooks?.join(",") ?? ""}
+                onChange={(e) => handleArrayChange(e, 'favoriteBooks')}
+                />
+                <input
+                type="text"
+                name="reviews"
+                placeholder="Reviews"
+                value={formData.reviews?.join(",") ?? ""}
+                onChange={(e) => handleArrayChange(e, 'reviews')}
                 />
 
                 <button 
