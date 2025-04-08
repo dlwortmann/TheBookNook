@@ -12,24 +12,36 @@ const profilePage = () => {
   return (
     <div>
       <h1>{userData.username}'s Profile</h1>
-      <h2>These are your Favorited Movies</h2>
-      <ul>
-        {userData.favoriteMovies.map((movie) => (
-          <li key={movie.id}>{movie.title}</li>
-        ))}
-      </ul>
-      <h2>These are your Favorite Books</h2>
-      <ul>
-        {userData.favoriteBooks.map((book) => (
-          <li key={book.id}>{book.title}</li>
-        ))}
-      </ul>
-      <h2>Here are Reviews you have left</h2>
-      <ul>
-        {userData.reviews.map((review) => (
-          <li key={review.id}>{review.content}</li>
-        ))}
-      </ul>
+      
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ flex: 1, marginRight: '20px' }}>
+          <h2>Favorite Movies</h2>
+          <ul>
+            {userData.favoriteMovies.map((movie) => (
+              <li key={movie.id}>{movie.title}</li>
+            ))}
+          </ul>
+        </div>
+        
+        <div style={{ flex: 1, marginRight: '20px' }}>
+          <h2>Favorite Books</h2>
+          <ul>
+            {userData.favoriteBooks.map((book) => (
+              <li key={book.id}>{book.title}</li>
+            ))}
+          </ul>
+        </div>
+    
+        <div style={{ flex: 1 }}>
+          <h2>Your Reviews</h2>
+          <ul>
+            {userData.reviews.map((review) => (
+              <li key={review.id}>{review.content}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
-  );
-};
+   )
+  };
+      
