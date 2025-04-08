@@ -1,16 +1,15 @@
-import { Outlet } from 'react-router-dom';
-import  NavTab  from './components/Navtab'
+//import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css'
 
 function App() {
   
   return (
-   <>
-   <NavTab />
-   <main>
-    <Outlet />
-   </main>
-   </>
+   <div>
+    <Header />
+    <Footer />
+   </div>
   )
 }
 

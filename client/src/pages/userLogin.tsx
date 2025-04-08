@@ -5,8 +5,8 @@ const UserLoginPage = () => {
 
 // initialize state and setting it to an empty array of type userLogin
     const [formData, setFormData] = useState<UserLogin>({
-        username: null,
-        password: null,
+        username: '',
+        password: '',
     });
 // keeps track of login error messages
     const [error, setError] = useState<string | null>(null);
