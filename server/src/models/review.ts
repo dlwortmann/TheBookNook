@@ -1,15 +1,15 @@
 import { DataTypes, Sequelize, Model, Optional } from 'sequelize';
 
 interface ReviewAttributes {
-    id: number;
+    review_id: number;
     content: string;
     author: string;
 }
 
-interface ReviewCreationAttributes extends Optional<ReviewAttributes, 'id'> { }
+interface ReviewCreationAttributes extends Optional<ReviewAttributes, 'review_id'> { }
 
 export class Review extends Model<ReviewAttributes, ReviewCreationAttributes> implements ReviewAttributes {
-    public id!: number;
+    public review_id!: number;
     public content!: string;
     public author!: string;
 }
@@ -17,7 +17,7 @@ export class Review extends Model<ReviewAttributes, ReviewCreationAttributes> im
 export function ReviewFactory(sequelize: Sequelize): typeof Review {
     Review.init(
         {
-            id: {
+            review_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
@@ -39,15 +39,15 @@ export function ReviewFactory(sequelize: Sequelize): typeof Review {
 }
 
 interface ReviewResponseAttributes {
-    reviewId: number;
+    response_id: number;
     content: string;
     author: string;
 }
 
-interface ReviewResponseCreationAttributes extends Optional<ReviewResponseAttributes, 'reviewId'> { }
+interface ReviewResponseCreationAttributes extends Optional<ReviewResponseAttributes, 'response_id'> { }
 
 export class ReviewResponse extends Model<ReviewResponseAttributes, ReviewResponseCreationAttributes> implements ReviewResponseAttributes {
-    public reviewId!: number;
+    public response_id!: number;
     public content!: string;
     public author!: string;
 }
@@ -55,7 +55,7 @@ export class ReviewResponse extends Model<ReviewResponseAttributes, ReviewRespon
 export function ReviewResponseFactory(sequelize: Sequelize): typeof ReviewResponse {
     ReviewResponse.init(
         {
-            reviewId: {
+            response_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
