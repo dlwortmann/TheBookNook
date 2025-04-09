@@ -1,4 +1,4 @@
-import { Book } from '../models/book.js'
+import { Book } from '../models/index.js'
 
 export const seedBooks = async () => {
     await Book.bulkCreate([

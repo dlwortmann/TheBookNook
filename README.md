@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# The Book Nook 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An application made for book lovers! If you have a passion for reading and are looking for a place to keep track of your favorite books, as well as movies based off books, The Book Nook is for you!  
 
-Currently, two official plugins are available:
+## Description 
+The Book Nook allows a user to search an extensive book library, as well as search movies based on a book. Once a user creates a profile, they will then be able to favorite and keep track of their favorite books and movies. Something that sets The Book Nook apart is a feature that allows the user to leave reviews and join discussion boards to communicate with fellow Book Nook lovers.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Link](#link)
+- [Authors](#authors)
+- [License](#license) 
+- [Questions](#questions)
 
-## Expanding the ESLint configuration
+## Built With 
+- [![React][React.js]][React-url]
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
+Clone this repository onto your local machine, then open up your integrated terminal. Run command "npm run build", followed by "npm run start", then the live server will pull up. 
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Usage 
+This application is super useful for a book lover who needs a place to keep track of their favorite books, and be able to search for more! Also convinient for users who love a good movie based off a book. 
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Link
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Authors
+Danny Wortmann
+- Github: https://github.com/dlwortmann 
+Madeline Funk
+- Github: https://github.com/maddiefunk
+Stephen Schier
+- Github: https://github.com/SSgrandslam7
+DeJohn Nelson
+Github: https://github.com/DeJohnNelson
+
+## License 
+MIT
+
+## Questions 
+If you have any questions, please feel free to reach out to any of our authors! 

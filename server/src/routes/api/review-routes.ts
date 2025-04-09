@@ -17,10 +17,10 @@ router.get('/', async (_req: Request, res: Response) => {
 
 // get all responses to a specific review
 // update based on review.ts BECAUSE ITS CURRENTLY NONEXISTENt
-router.get('/:reviewId/responses', async (req: Request, res: Response) => {
+router.get('/:id/responses', async (req: Request, res: Response) => {
     try {
         const responses = await ReviewResponse.findAll({
-            where: { reviewId: req.params.reviewId },
+            where: { response_id: req.params.review_id },
         });
         res.status(200).json(responses);
     } catch (error) {
@@ -29,11 +29,11 @@ router.get('/:reviewId/responses', async (req: Request, res: Response) => {
 });
 
 // add response to review 
-router.post('/:reviewId/responses', async (req: Request, res: Response) => {
+router.post('/:id/responses', async (req: Request, res: Response) => {
     const { content, author } = req.body;
     try {
         const response = await ReviewResponse.create({
-           // reviewId: req.params.reviewId,
+            //response_id: req.params.response_id,
             content,
             author,
         });
@@ -45,9 +45,9 @@ router.post('/:reviewId/responses', async (req: Request, res: Response) => {
 
 
 // update a response 
-router.put('/:reviewId/responses/:responseId', async (req: Request, res: Response) => {
+router.put('/:id/responses/:id', async (req: Request, res: Response) => {
     try {
-        const response = await ReviewResponse.findByPk(req.params.responseId);
+        const response = await ReviewResponse.findByPk(req.params.response_id);
         if (!response) {
             return res.status(404).json({ message: 'Response not found.' });
         }
@@ -60,10 +60,10 @@ router.put('/:reviewId/responses/:responseId', async (req: Request, res: Respons
 });
 
 // delete a response
-router.delete('/:reviewId/responses/:responseId', async (req: Request, res: Response) => {
+router.delete('/:id/responses/:id', async (req: Request, res: Response) => {
     try {
         const deleted = await ReviewResponse.destroy({
-            where: { reviewId: req.params.responseId },
+            where: { response_id: req.params.response_id },
         });
         if (!deleted) {
             return res.status(404).json({ message: 'Response not found.' });
@@ -80,7 +80,7 @@ router.delete('/:id', async (req: Request, res: Response) => {
     try {
         const reviews = await Review.destroy({
             where: {
-                id: req.params.id,
+                review_id: req.params.id,
             },
         });
         if (!reviews) {
