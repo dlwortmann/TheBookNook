@@ -3,7 +3,7 @@ export interface UserData {
     email: string | null;
     username: string | null;
     password?: string | null;
-    favoriteMovies?:string[];
-    favoriteBooks?:string[];
-    reviews?:string[];
+    favoriteMovies?: Array<{ id: number; title: string }>;
+    favoriteBooks?: Array<{ id: number; title: string }>;
+    reviews?: Array<{ id: number; content: string }>;
 }
