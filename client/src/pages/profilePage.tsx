@@ -7,8 +7,16 @@
 import React, { useState } from 'react';
 import type { UserData } from "../interfaces/userData";
 
-const profilePage = () => {
-  const [userData, setUserData] = useState<UserData > ({}as UserData);
+const ProfilePage: React.FC = () => {
+  const [userData, setUserData] = useState<UserData > ({
+    id: null,
+    email: null,
+    username: '',
+    password: null,
+    favoriteMovies: [],
+    favoriteBooks: [],
+    reviews: []
+  });
 
   return (
     <div>
@@ -18,7 +26,7 @@ const profilePage = () => {
         <div style={{ flex: 1, marginRight: '20px' }}>
           <h2>Favorite Movies</h2>
           <ul>
-            {userData.favoriteMovies.map((movie) => (
+            {userData.favoriteMovies?.map((movie) => (
               <li key={movie.id}>{movie.title}</li>
             ))}
           </ul>
@@ -27,7 +35,7 @@ const profilePage = () => {
         <div style={{ flex: 1, marginRight: '20px' }}>
           <h2>Favorite Books</h2>
           <ul>
-            {userData.favoriteBooks.map((book) => (
+            {userData.favoriteBooks?.map((book) => (
               <li key={book.id}>{book.title}</li>
             ))}
           </ul>
@@ -36,7 +44,7 @@ const profilePage = () => {
         <div style={{ flex: 1 }}>
           <h2>Your Reviews</h2>
           <ul>
-            {userData.reviews.map((review) => (
+            {userData.reviews?.map((review) => (
               <li key={review.id}>{review.content}</li>
             ))}
           </ul>
