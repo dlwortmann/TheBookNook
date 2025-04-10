@@ -6,6 +6,7 @@
 
 import React, { useState } from 'react';
 import type { UserData } from "../interfaces/userData";
+import BookSearch from '../components/bookfav';
 
 const ProfilePage: React.FC = () => {
   const [userData, setUserData] = useState<UserData > ({
@@ -34,6 +35,9 @@ const ProfilePage: React.FC = () => {
         
         <div style={{ flex: 1, marginRight: '20px' }}>
           <h2>Favorite Books</h2>
+          <div>
+            <BookSearch />
+          </div>
           <ul>
             {userData.favoriteBooks?.map((book) => (
               <li key={book.id}>{book.title}</li>
