@@ -69,7 +69,10 @@ const UserLoginPage = () => {
                     Login 
                 </button> 
             </form> 
-            <button onClick={handleClick} className="mt-4">Create Account</button>
+            <p className="mt-4">Don't have an account?</p>
+            <button onClick={handleClick} className="mt-2 bg-blue-500 text-white p-2 rounded">
+                Create Account
+            </button>
         </div> 
     ); 
 };
