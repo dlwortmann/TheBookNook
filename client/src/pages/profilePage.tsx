@@ -20,7 +20,7 @@ const ProfilePage: React.FC = () => {
 
   return (
     <div>
-      <h1>{userData.username}'s Profile</h1>
+      <h1>{userData.username?.trim() || 'Guest'}'s Profile</h1>
       
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ flex: 1, marginRight: '20px' }}>

@@ -17,6 +17,12 @@ const MovieSearch: React.FC = () => {
         setError("");
         setMovie(null);
 
+        if (!query.trim()) {
+            setError("Please enter a movie title.");
+            setLoading(false);
+            return;
+        }
+
         const data = await searchOMDB(query);
 // matches up the input with the movie 
         if (data && data.Title) {
@@ -42,7 +48,7 @@ const MovieSearch: React.FC = () => {
     const extractRottenTomatoesRating = (ratings: any[]): number => {
         const rt = ratings?.find((r) => r.Source === "Rotten Tomatoes");
         if (rt && rt.Value.includes("%")) {
-            return parseInt(rt.value.replace("%", ""));
+            return parseInt(rt.Value.replace("%", ""));
         }
         return 0;
     };

@@ -6,6 +6,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -22,7 +23,7 @@ function App() {
    <div>
     <Header />
     <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-      <button onClick={toggleMode}>
+      <button id="theme-toggle" onClick={toggleMode}>
         Switch to {darkMode ? 'Light' : 'Dark'} Mode
       </button>
     </div>
@@ -32,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+

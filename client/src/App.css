@@ -5,13 +5,28 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #eadfc4;
   color: #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  background-color: #eadfc4;
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
 }
 
 .logo {
@@ -46,6 +61,11 @@ body {
   color: #888;
 }
 
+#theme-toggle {
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+}
+
 /* LIHGT MODEE */
 .light-mode {
   background-color: #f9f5eb;
@@ -57,6 +77,10 @@ body {
   color: #fff;
 }
 
+.light-mode footer {
+  background-color: #f9f5eb;
+  color: #3c3c3c;
+}
 /* button styles */
 .light-mode button {
   background-color: #a7c957;
@@ -76,11 +100,23 @@ body {
   color: #a26769;
 }
 
+.light-mode .nav-item a {
+  color: #333;
+}
+
+.light-mode .nav-item a:hover {
+  color: #588157;
+}
 
 /* DAAAAARK mode */
 .dark-mode {
   background-color: #2d2d2a;
   color: #e6e6e6;
+}
+
+.light-mode footer {
+  background-color: #f9f5eb;
+  color: #3c3c3c;
 }
 
 .dark-mode .card {
@@ -100,9 +136,16 @@ body {
   background-color: #2f3e2e;
 }
 
-/* accent text if necessary? */
 .dark-mode .accent-text {
   color: #cdb4db;
+}
+
+.dark-mode .nav-item a {
+  color: #e6e6e6;
+}
+
+.dark-mode .nav-item a:hover {
+  color: #a7c957;
 }
 
 
@@ -124,10 +167,10 @@ a:hover {
 
 /* buttons & transitions */
 button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.4rem 1rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   cursor: pointer;
   transition: background-color 200ms, transform 100ms;
 }
@@ -138,4 +181,40 @@ button {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 600px;
+}
+
+/* nav styling */
+.nav-tab {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-item a:hover {
+  color: #3a5a40;
+}
+
+.nav-itme .active {
+  font-weight: bold;
 }

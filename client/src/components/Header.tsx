@@ -3,7 +3,7 @@ import NavTab from './Navtab';
 import { Outlet } from 'react-router-dom'
 
 function Header() {
-    const [currentPage, setCurrentPage] = useState("/")
+    const [currentPage, setCurrentPage] = useState("/");
 
     return (
         <div className="headerParent" style={{ padding: "0px 0px 10px 43px"}}>
