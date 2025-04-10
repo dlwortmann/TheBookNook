@@ -1,11 +1,10 @@
 //Movie API
 const searchOMDB = async (query: string) => {
+  const apiKey = import.meta.env.VITE_OMDB_API_KEY
     try {
       console.log(import.meta.env.VITE_OMDB_API_KEY);
       const response = await fetch(
-        `https://www.omdbapi.com/?t=${query}&apikey=${
-          import.meta.env.VITE_OMDB_API_KEY
-        }`
+        `https://www.omdbapi.com/?t=${query}&apikey=${apiKey}`
       );
       console.log('Response:', response);
       const data = await response.json();
@@ -16,7 +15,7 @@ const searchOMDB = async (query: string) => {
       return data;
     } catch (err) {
       console.log('an error occurred', err);
-      return [];
+      return null;
     }
   };
   
