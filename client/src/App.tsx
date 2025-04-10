@@ -24,12 +24,6 @@ function App() {
         Switch to {darkMode ? 'Light' : 'Dark'} Mode
       </button>
     </div>
-
-    <div className="card">
-      <h1 className="accent-text"></h1>
-      <p>This is { darkMode ? 'Dark' : 'Light' } Mode</p>
-    </div>
-  
     <Footer />
    </div>
   )
