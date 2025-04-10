@@ -5,6 +5,9 @@ An application made for book lovers! If you have a passion for reading and are l
 ## Description 
 The Book Nook allows a user to search an extensive book library, as well as search movies based on a book. Once a user creates a profile, they will then be able to favorite and keep track of their favorite books and movies. Something that sets The Book Nook apart is a feature that allows the user to leave reviews and join discussion boards to communicate with fellow Book Nook lovers.  
 
+## Sneak Peak
+*add ss here*
+
 ## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -14,7 +17,11 @@ The Book Nook allows a user to search an extensive book library, as well as sear
 - [Questions](#questions)
 
 ## Built With 
-- [![React][React.js]][React-url]
+- Node.js
+- Express.js
+- React
+- PostgreSQL
+- Sequelize 
 
 ## Installation
 Clone this repository onto your local machine, then open up your integrated terminal. Run command "npm run build", followed by "npm run start", then the live server will pull up. 
