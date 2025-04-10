@@ -7,6 +7,7 @@ import BookSearch from './pages/bookSearch.tsx'
 import UserLoginPage from './pages/userLogin.tsx'
 import MovieSearch from './pages/movieSearch.tsx'
 import ProfilePage from './pages/profilePage.tsx'
+import CreateAccount from './pages/createAccount.tsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path:'MovieSearch',
         element: <MovieSearch />
       },
+      {
+        path:'CreateAccount',
+        element: <CreateAccount />
+      }
     ],
   },
 ]);
