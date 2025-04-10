@@ -18,8 +18,18 @@ const NavTab = ({ currentPage, setCurrentPage }: NavProps) => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/ErrorPage" className={currentPage === '/ErrorPage' ? 'active' : ''}>
-            ErrorPage
+          <Link to="/ProfilePage" className={currentPage === '/ProfilePage' ? 'active' : ''}>
+            Profile Page
+          </Link>
+          </li>
+          <li className="nav-item">
+          <Link to="/BookSearch" className={currentPage === '/BookSearch' ? 'active' : ''}>
+            Book Search
+          </Link>
+          </li>
+          <li className="nav-item">
+          <Link to="/MovieSearch" className={currentPage === '/MovieSearch' ? 'active' : ''}>
+            Movie Search
           </Link>
         </li>
       </ul>
