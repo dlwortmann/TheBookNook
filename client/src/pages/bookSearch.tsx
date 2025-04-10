@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import type { Book } from "../interfaces/bookSearch";
-import { searchBooks } from "../api/API";
+//import { searchBooks } from "../api/API";
+const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 const BookSearch: React.FC = () => {
+    const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
     const [searchTerm, setSearchTerm] = useState('');
     const [searchType, setSearchType] = useState('title'); // Default search by title
-    const [results, setResults] = useState<any[]>([]); // State to hold search results
+    const [results, setResults] = useState<Book[]>([]); // State to hold search results
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(e.target.value);
@@ -16,14 +20,18 @@ const BookSearch: React.FC = () => {
     }; //updates searchType
 
     const handleSearch = async () => {
+        setLoading(true);
+        setError(null);
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchType}:${searchTerm}&key=AIzaSyDQcjhcdoE3PMm70oJ9zKA_hAsUZOngLB8`, {
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchType}:${searchTerm}&key=${apiKey}`, {
                 
             });
             const data = await response.json()
             setResults(data.items || []); // Set results to state
         } catch (error) {
             console.error('Error fetching data from Google Books API:', error);
+        } finally {
+            setLoading(false);
         }
     };
 
