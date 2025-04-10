@@ -3,6 +3,7 @@ import type { UserLogin } from "../interfaces/userLogin";
 //import { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 
+
 const UserLoginPage = () => {
 // initialize state and setting it to an empty array of type userLogin
     const [formData, setFormData] = useState<UserLogin>({
@@ -11,7 +12,6 @@ const UserLoginPage = () => {
     });
 const [isRegistering, setIsRegistering] = useState(false); //State to toggle between login and registration
 const [error, setError] = useState<string | null>(null); // keeps track of login error messages
-const navigate = useNavigate();
 
 // updates correct data and keeps other values unchanged 
 // triggered when user types into username/password fields
@@ -38,7 +38,7 @@ const navigate = useNavigate();
             // handle user registration
             console.log("Registering new user with", formData);
             //Add you login lofic here (e.g., API call to log in)
-            navigate('/profilePage');
+           
             }
         } catch (err) {
             setError(isRegistering ? "Registration failed, please try again." : "Login failed, please try again.")
