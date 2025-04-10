@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { UserLogin } from "../interfaces/userLogin";
-
+import { useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 const UserLoginPage = () => {
 
 // initialize state and setting it to an empty array of type userLogin
@@ -10,6 +11,7 @@ const UserLoginPage = () => {
     });
 // keeps track of login error messages
     const [error, setError] = useState<string | null>(null);
+    const navigate = useNavigate();
 // updates correct data and keeps other values unchanged 
 // triggered when user types into username/password fields
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +25,7 @@ const UserLoginPage = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
+        navigate('/profilePage');
 
 //basic form validation
         if (!formData.username || !formData.password) {
@@ -35,6 +38,8 @@ const UserLoginPage = () => {
             setError("Login failed, please try again.");
         }
     };
+
+
 // rendering form 
     return (
         <div className="login-container">
