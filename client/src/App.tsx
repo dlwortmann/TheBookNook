@@ -22,7 +22,7 @@ function App() {
    <div>
     <Header />
     <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-      <button onClick={toggleMode}>
+      <button id="theme-toggle" onClick={toggleMode}>
         Switch to {darkMode ? 'Light' : 'Dark'} Mode
       </button>
     </div>
