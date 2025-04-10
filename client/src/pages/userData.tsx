@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { UserData } from "../interfaces/userData";
+import { useNavigate } from "react-router-dom";
 
 const UserDataPage = () => {
     const [formData, setFormData] = useState<UserData>({
@@ -11,7 +12,7 @@ const UserDataPage = () => {
         favoriteBooks: [],
         reviews: [],
     });
-
+    const navigate = useNavigate();
     const [message, setMessage] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,6 +33,10 @@ const UserDataPage = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        setTimeout(() => {
+            navigate('/profilePage');
+        }
+        , 1000); // Simulate a delay before navigating
 
         if(!formData.email || !formData.username || !formData.password) {
             setMessage("All fields are required.");
@@ -55,6 +60,7 @@ const UserDataPage = () => {
                 placeholder="Email"
                 value={formData.email ?? ""}
                 onChange={handleChange}
+                className="border p-2 rounded"
                 />
                    <input
                 type="text"
@@ -62,6 +68,7 @@ const UserDataPage = () => {
                 placeholder="Username"
                 value={formData.username ?? ""}
                 onChange={handleChange}
+                className="border p-2 rounded"
                 />
                    <input
                 type="password"
@@ -69,27 +76,7 @@ const UserDataPage = () => {
                 placeholder="Password"
                 value={formData.password ?? ""}
                 onChange={handleChange}
-                />
-                    <input
-                type="text"
-                name="favoriteMovies"
-                placeholder="Favorite Movies"
-                value={formData.favoriteMovies?.join(",") ?? ""}
-                onChange={(e) => handleArrayChange(e, 'favoriteMovies')}
-                />
-                <input
-                type="text"
-                name="favoriteBooks"
-                placeholder="Favorite Books"
-                value={formData.favoriteBooks?.join(",") ?? ""}
-                onChange={(e) => handleArrayChange(e, 'favoriteBooks')}
-                />
-                <input
-                type="text"
-                name="reviews"
-                placeholder="Reviews"
-                value={formData.reviews?.join(",") ?? ""}
-                onChange={(e) => handleArrayChange(e, 'reviews')}
+                className="border p-2 rounded"
                 />
 
                 <button 
@@ -103,3 +90,5 @@ const UserDataPage = () => {
 };
 
 export default UserDataPage;
+//make this page the create account page
+//have it switch to the login page after pressing submit 
