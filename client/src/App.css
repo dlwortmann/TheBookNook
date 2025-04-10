@@ -1,3 +1,12 @@
+/* global styling (background/base font) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eadfc4;
+  color: #3c3c3c;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -33,10 +42,100 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
+}
+
+/* LIHGT MODEE */
+.light-mode {
+  background-color: #f9f5eb;
+  color: #3c3c3c;
+}
+
+.light-mode .card {
+  background-color: #d4a373;
+  color: #fff;
+}
+
+/* button styles */
+.light-mode button {
+  background-color: #a7c957;
+  color: white;
+}
+
+.light-mode button:hover {
+  background-color: #6a994e;
+}
+
+.light-mode button:active {
+  background-color: #386641;
+}
+
+/* accent text if necessary? */
+.light-mode .accent-text {
+  color: #a26769;
+}
+
+
+/* DAAAAARK mode */
+.dark-mode {
+  background-color: #2d2d2a;
+  color: #e6e6e6;
+}
+
+.dark-mode .card {
+  background-color: #3e3e3a;
+  color: #e6e6e6;
+}
+.dark-mode button {
+  background-color: #588157;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: #3a5a40;
+}
+
+.dark-mode button:active {
+  background-color: #2f3e2e;
+}
+
+/* accent text if necessary? */
+.dark-mode .accent-text {
+  color: #cdb4db;
+}
+
+
+/* links */
+a {
+  color: #588157;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3a5a40;
+  text-decoration: underline;
+}
+
+/* transitions whaa */
+* {
+  transition: all 0.2s ease-in-out;
+} 
+
+/* buttons & transitions */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 200ms, transform 100ms;
+}
+
+.card {
+  padding: 2rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
