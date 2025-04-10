@@ -7,6 +7,7 @@
 import React, { useState } from 'react';
 import type { UserData } from "../interfaces/userData";
 import BookSearch from '../components/bookfav';
+import MovieSearch from '../components/moviefav';
 
 const ProfilePage: React.FC = () => {
   const [userData, setUserData] = useState<UserData > ({
@@ -26,6 +27,9 @@ const ProfilePage: React.FC = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div style={{ flex: 1, marginRight: '20px' }}>
           <h2>Favorite Movies</h2>
+          <div>
+            <MovieSearch />
+          </div>
           <ul>
             {userData.favoriteMovies?.map((movie) => (
               <li key={movie.id}>{movie.title}</li>
