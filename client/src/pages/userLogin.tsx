@@ -2,18 +2,8 @@ import { useState } from "react";
 import type { UserLogin } from "../interfaces/userLogin"; 
 import { useNavigate } from 'react-router-dom'; 
 
-
-
-const UserLoginPage = () => {
-// initialize state and setting it to an empty array of type userLogin
-    const [formData, setFormData] = useState<UserLogin>({
-        username: '',
-        password: '',
-    });
-const [isRegistering, setIsRegistering] = useState(false); //State to toggle between login and registration
-const [error, setError] = useState<string | null>(null); // keeps track of login error messages
-=======
-
+const UserLoginPage = () => { 
+    const navigate = useNavigate(); // Initialize navigate
 
     // Initialize state and set it to an empty object of type UserLogin 
     const [formData, setFormData] = useState<UserLogin>({ username: '', password: '' }); 
@@ -27,24 +17,10 @@ const [error, setError] = useState<string | null>(null); // keeps track of login
         setFormData(prev => ({ ...prev, [name]: value })); 
     }; 
 
-
-        try {
-            if (isRegistering) {
-            // handle user registration
-            console.log("Registering new user with", formData);
-            //Add you login lofic here (e.g., API call to log in)
-           
-            }
-        } catch (err) {
-            setError(isRegistering ? "Registration failed, please try again." : "Login failed, please try again.")
-            }
-        };
-
     // Prevent page refresh and resets previous errors 
     const handleSubmit = async (e: React.FormEvent) => { 
         e.preventDefault(); 
         setError(null); 
-
 
         // Basic form validation 
         if (!formData.username || !formData.password) { 
