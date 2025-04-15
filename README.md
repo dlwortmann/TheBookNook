@@ -31,6 +31,8 @@ This application is super useful for a book lover who needs a place to keep trac
 
 ## Link
 
+[Link to TheBookNook] (https://thebooknook-9d9l.onrender.com/)
+
 
 ## Authors
 Danny Wortmann
@@ -40,7 +42,7 @@ Madeline Funk
 Stephen Schier
 - Github: https://github.com/SSgrandslam7
 DeJohn Nelson
-Github: https://github.com/DeJohnNelson
+- Github: https://github.com/DeJohnNelson
 
 ## License 
 MIT
