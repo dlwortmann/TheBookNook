@@ -1,5 +1,8 @@
 # The Book Nook 
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 An application made for book lovers! If you have a passion for reading and are looking for a place to keep track of your favorite books, as well as movies based off books, The Book Nook is for you!  
 
 ## Description 
@@ -31,21 +34,21 @@ This application is super useful for a book lover who needs a place to keep trac
 
 ## Link
 
-[Link to TheBookNook] (https://thebooknook-9d9l.onrender.com/)
+[Go to TheBookNook](https://thebooknook-9d9l.onrender.com/)
 
 
 ## Authors
-Danny Wortmann
-- Github: https://github.com/dlwortmann 
-Madeline Funk
-- Github: https://github.com/maddiefunk
-Stephen Schier
-- Github: https://github.com/SSgrandslam7
-DeJohn Nelson
-- Github: https://github.com/DeJohnNelson
+- Danny Wortmann
+Github: https://github.com/dlwortmann 
+- Madeline Funk
+Github: https://github.com/maddiefunk
+- Stephen Schier
+Github: https://github.com/SSgrandslam7
+- DeJohn Nelson
+Github: https://github.com/DeJohnNelson
 
 ## License 
-MIT
+This application is covered under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Questions 
 If you have any questions, please feel free to reach out to any of our authors! 
