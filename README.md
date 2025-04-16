@@ -9,7 +9,9 @@ An application made for book lovers! If you have a passion for reading and are l
 The Book Nook allows a user to search an extensive book library, as well as search movies based on a book. Once a user creates a profile, they will then be able to favorite and keep track of their favorite books and movies. Something that sets The Book Nook apart is a feature that allows the user to leave reviews and join discussion boards to communicate with fellow Book Nook lovers.  
 
 ## Sneak Peak
-*add ss here*
+![Screenshot 2025-04-15 182905](https://github.com/user-attachments/assets/02dca4dd-5607-4430-b0a6-8e1b2b3ee6a5)
+![Screenshot 2025-04-15 182837](https://github.com/user-attachments/assets/222a9388-e716-4fd0-895b-ac440d9b251c)
+![Screenshot 2025-04-15 182752](https://github.com/user-attachments/assets/cebf4449-75b9-4626-9c4f-643c29b29cfb)
 
 ## Table of Contents 
 - [Installation](#installation)
